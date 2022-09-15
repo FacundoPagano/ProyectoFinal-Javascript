@@ -24,9 +24,6 @@ function cargarEventListeners() {
 
 }
 
-
-
-
 // Funciones
 function agregarProducto(e) {
      e.preventDefault();
@@ -38,7 +35,6 @@ function agregarProducto(e) {
      }
 }
 
-
 function leerDatosProducto(producto) {
      const infoProducto = {
           imagen: producto.querySelector('img').src,
@@ -48,7 +44,6 @@ function leerDatosProducto(producto) {
           id: producto.querySelector('button').getAttribute('data-id'), 
           cantidad: 1
      }
-
 
      if( articulosCarrito.some( producto => producto.id === infoProducto.id ) ) { 
           const productos = articulosCarrito.map( producto => {
@@ -70,7 +65,6 @@ function leerDatosProducto(producto) {
      carritoHTML();
 }
 
-
 function eliminarProducto(e) {
      e.preventDefault();
      if(e.target.classList.contains('borrar-producto') ) {
@@ -81,8 +75,6 @@ function eliminarProducto(e) {
           carritoHTML();
      }
 }
-
-
 
 function carritoHTML() {
 
@@ -103,14 +95,9 @@ function carritoHTML() {
           `;
           contenedorCarrito.appendChild(row);
      });
-
 }
 
-
 function vaciarCarrito() {
-
-
-
 
      while(contenedorCarrito.firstChild) {
           contenedorCarrito.removeChild(contenedorCarrito.firstChild);
