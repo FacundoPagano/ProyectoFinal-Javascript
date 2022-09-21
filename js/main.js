@@ -22,6 +22,12 @@ function cargarEventListeners() {
 
      vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
 
+     document.addEventListener('DOMContentLoaded', () => {
+          articulosCarrito = JSON.parse( localStorage.getItem('articulosCarrito') ) || []  ;
+          console.log(articulosCarrito);
+          carritoHTML();
+     });
+
 }
 
 // Funciones
@@ -35,13 +41,25 @@ function agregarProducto(e) {
      }
 }
 
+function totalProducto(){
+     leerDatosProducto();
+     if(producto.cantidad === 1){
+          producto.precio;
+          return producto;
+     } else {
+          producto.precio * producto.cantidad;
+          return producto
+     }
+     
+}
+
 function leerDatosProducto(producto) {
      const infoProducto = {
           imagen: producto.querySelector('img').src,
           titulo: producto.querySelector('h3').textContent,
           precio: producto.querySelector('.precio').textContent,
           material: producto.querySelector('.material').textContent,
-          id: producto.querySelector('button').getAttribute('data-id'), 
+          id: producto.querySelector('button').getAttribute('data-id'),
           cantidad: 1
      }
 
@@ -87,20 +105,31 @@ function carritoHTML() {
                     <img src="${producto.imagen}" width=100>
                </td>
                <td>${producto.titulo}</td>
+               <td>${producto.material} </td>
                <td>${producto.precio}</td>
                <td>${producto.cantidad} </td>
-               <td>
                     <button class="borrar-producto" data-id="${producto.id}">X</button>
                </td>
           `;
           contenedorCarrito.appendChild(row);
      });
+     
+     cargarStorage()
 }
 
 function vaciarCarrito() {
 
      while(contenedorCarrito.firstChild) {
           contenedorCarrito.removeChild(contenedorCarrito.firstChild);
+          vaciarStorage();
       }
 }
 
+function cargarStorage(){
+     localStorage.setItem('articulosCarrito',JSON.stringify(articulosCarrito))
+}
+
+function vaciarStorage() {
+     localStorage.clear();
+     location. reload();
+}
