@@ -6,6 +6,8 @@ const listaProductos = document.querySelector('#catalogo');
 const contenedorCarrito = document.querySelector('#carrito-obj tbody');
 const vaciarCarritoBtn = document.querySelector('#vaciar'); 
 let articulosCarrito = [];
+
+
 //Funciones
 
 //Procedimiento
@@ -102,7 +104,7 @@ function carritoHTML() {
           const row = document.createElement('tr');
           row.innerHTML = `
                <td>  
-                    <img src="${producto.imagen}" width=100>
+                    <img src="${producto.imagen}" width=100 height=100>
                </td>
                <td>${producto.titulo}</td>
                <td>${producto.material} </td>
@@ -148,3 +150,25 @@ function vaciarCarritoNotificacion(){
           }
         })
 }
+
+
+
+fetch("./js/data.json")
+.then((data)=>data.json())
+.then((prod)=>{
+     prod.forEach(item=>{
+          const div = document.createElement('div');
+          div.innerHTML=`
+          <div>
+               <img class="imagen" src="${item.imagen}">
+               <div>
+                    <h3>${item.nombre}</h3>
+                    <p class="precio">${item.precio}</p>
+                    <p class="material">${item.material}</p>
+                    <button class="agregar-carrito" data-id="${item.id}">Agregar al carrito</button>
+               </div>
+          </div>
+          `;
+          listaProductos.append(div)
+     });
+})

@@ -1,0 +1,37 @@
+[
+    {
+        "id":1,
+        "nombre":"Remera",
+        "material": "Algodon",
+        "precio":3000,
+        "imagen":"./assets/remera.jpg"
+    },
+    {
+        "id":2,
+        "nombre":"Buzo",
+        "material": "Algodon",
+        "precio":6000,
+        "imagen":"./assets/buzo.jpg"
+    },
+    {
+        "id":3,
+        "nombre":"Campera",
+        "material": "Algodon",
+        "precio":8000,
+        "imagen":"./assets/Campera.jpg"
+    },
+    {
+        "id":4,
+        "nombre":"Pantalon",
+        "material": "Jean",
+        "precio":5000,
+        "imagen":"./assets/pantalon.webp"
+    },
+    {
+        "id":5,
+        "nombre":"Zapatillas",
+        "material": "Gamuza",
+        "precio":12000,
+        "imagen":"./assets/zapatillas.jpg"
+    }
+]
