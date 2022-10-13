@@ -110,7 +110,7 @@ function carritoHTML() {
                <td>${producto.material} </td>
                <td>${producto.precio}</td>
                <td>${producto.cantidad} </td>
-                    <button class="borrar-producto" data-id="${producto.id}">X</button>
+               <td><button class="borrar-producto" data-id="${producto.id}">X</button>
                </td>
           `;
           contenedorCarrito.appendChild(row);
@@ -159,11 +159,11 @@ fetch("./js/data.json")
      prod.forEach(item=>{
           const div = document.createElement('div');
           div.innerHTML=`
-          <div>
+          <div class="objeto">
                <img class="imagen" src="${item.imagen}">
                <div>
                     <h3>${item.nombre}</h3>
-                    <p class="precio">${item.precio}</p>
+                    <p class="precio">$ ${item.precio}</p>
                     <p class="material">${item.material}</p>
                     <button class="agregar-carrito" data-id="${item.id}">Agregar al carrito</button>
                </div>

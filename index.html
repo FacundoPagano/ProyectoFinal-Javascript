@@ -8,12 +8,14 @@
     <title>Tienda Nickers</title>
 </head>
 <body>
-    <h1 id="titulo">Titulo de la pagina</h1>
+    <div class="presentacion">
+    <h1  class="titulo" id="titulo">Titulo de la pagina</h1>
     <p class="parrafo" id="bienvenida"></p>
     <p class="parrafo">A continuacion seleccione las prendas que desea agregar a su carrito</p>
-        <h2>Productos</h2>
-    <section id="catalogo">
-    </section>
+        <h2 class="titulo-prod">Productos</h2>
+        <section  class="catalogo" id="catalogo">
+        </section>
+    </div>
     </Div>
     <div id="carrito">
         <table id="carrito-obj">
@@ -29,7 +31,10 @@
             </thead>
             <tbody></tbody>
         </table>
-        <button id="vaciar">Vaciar Carrito</button>
+        <div class="botones">
+            <button class="vaciar" id="vaciar">Vaciar Carrito</button>
+            <button class="compra" id="compra">Comprar</button>
+        </div>
     </div>
 
 
