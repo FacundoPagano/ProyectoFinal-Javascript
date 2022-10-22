@@ -6,8 +6,19 @@ body{
     height: 200px;
 }
 .parrafo{
-    font-size: 30px;
-    color: aliceblue;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+}
+
+.textos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: #000 3px solid;
+    background-color: white;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .presentacion{
@@ -41,16 +52,21 @@ justify-content: center;
 }
 
 .agregar-carrito{
-    background-color: rgb(127, 255, 255);
+    background: rgb(255, 255, 255);
     font-size: 20px;
-    border-radius: 5%;
     height: 40px;
 }
 .titulo-prod{
     font-size: 50px;
 }
 .titulo{
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    border: #000 5px solid;
     font-size: 100px;
+    background-color: rgb(255, 255, 255);
+    width: 500px;
 }
 
 table {
@@ -94,4 +110,15 @@ table {
 .botones{
     display: flex;
     justify-content: space-around;
+    margin-top: 30px;
+}
+
+.solapa-total{
+    background: rgb(146, 179, 216);
+    font-size: 30px;
+    border: black solid 3px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 10px;
 }

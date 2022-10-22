@@ -10,9 +10,11 @@
 <body>
     <div class="presentacion">
     <h1  class="titulo" id="titulo">Titulo de la pagina</h1>
-    <p class="parrafo" id="bienvenida"></p>
-    <p class="parrafo">A continuacion seleccione las prendas que desea agregar a su carrito</p>
-        <h2 class="titulo-prod">Productos</h2>
+    <div class="textos">  
+        <p class="parrafo" id="bienvenida"></p>
+        <p class="parrafo">A continuacion seleccione las prendas que desea agregar a su carrito</p>
+    </div>
+    <h2 class="titulo-prod">Productos</h2>
         <section  class="catalogo" id="catalogo">
         </section>
     </div>
@@ -24,13 +26,16 @@
                     <th>Imagen</th>
                     <th>Nombre</th>
                     <th>Material</th>
-                    <th>Precio</th>
                     <th>Cantidad</th>
+                    <th>Precio</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody></tbody>
         </table>
+        <div class="solapa-total">
+            Total: <span id="total-carrito"></span>
+        </div>
         <div class="botones">
             <button class="vaciar" id="vaciar">Vaciar Carrito</button>
             <button class="compra" id="compra">Comprar</button>
